@@ -1,0 +1,208 @@
+# ハレノヒクリーン 事実データ（正本）
+# 数値には source と confirmed_date を持たせる。
+# date_basis: 事実シート作成日 … 元の事実シートに個別の確認日がなく、作成日を入れた項目。
+# date_word: 確認／時点 … ページに日付を出すときの言い回し。
+
+site:
+  slug: harenohiclean
+  area: 松山
+  base_url: https://harenohiclean-ehime.github.io/harenohiclean-recruit/
+  noindex: true            # 試作公開中。オーナー承認後に false にする
+  page_updated: 2026-11-09
+  date_posted: 2026-11-09
+  valid_through: 2027-01-08
+  max_fact_age_days: 60    # 確認日からこの日数を過ぎた数値は公開しない
+
+business:
+  name: ハレノヒクリーン
+  representative: 桐島達也
+  location: 愛媛県松山市
+  location_note: 番地は面談時にお伝えします
+  phone: 070-9093-4837
+  phone_hours: 9:00〜18:00
+  website: https://harenohiclean2026.jp
+  founded: 2026-01-11
+
+job:
+  title: エアコンクリーニング職人（業務委託）
+  description: お客様宅でエアコンの養生・分解・高圧洗浄・組み立て・動作確認を行う
+  work_time:
+    - label: 標準タイプ1台
+      value: 1.5〜2時間
+    - label: お掃除機能付き1台
+      value: 2.5〜3時間
+  work_time_source: 自店の基準
+  work_time_confirmed_date: 2026-11-09
+  work_time_date_basis: 事実シート作成日
+  demand:
+    busy: 5〜8月・11〜12月
+    slow: 1月〜4月半ば
+    source: グループ標準
+    months:   # busy=繁忙期 slow=閑散期 none=どちらにも入らない
+      1: slow
+      2: slow
+      3: slow
+      4: slow_half
+      5: busy
+      6: busy
+      7: busy
+      8: busy
+      9: none
+      10: none
+      11: busy
+      12: busy
+
+requirements:
+  - 普通自動車免許（AT限定可）
+  - 未経験OK、学歴・年齢不問（18歳以上）
+  - 副業・Wワーク可
+
+achievements:   # 確認日が古くなったものはページから自動で隠す
+  - key: reviews
+    label: 口コミ合計
+    value: 128件
+    detail: くらしのマーケット57／ミツモア62／Google 7／おうちにプロ2
+    source: 自店の集計
+    confirmed_date: 2026-11-08
+    date_word: 確認
+  - key: jobs_total
+    label: 開業以来の作業実績
+    value: 133件・188台
+    source: 自店の作業履歴
+    confirmed_date: 2026-11-07
+    date_word: 時点
+  - key: jobs_90d
+    label: 直近90日の作業
+    value: 37件
+    source: 自店の作業履歴
+    confirmed_date: 2026-11-09
+    date_word: 確認
+  - key: group_stores
+    label: グループ店舗数
+    value: 全国60店舗以上
+    source: グループの数字・ありがとうグループ本部
+    confirmed_date: 2026-11-09
+    date_word: 確認
+
+pay:
+  formula: 1件あたりの報酬 × 完了件数 ＝ 報酬
+  nature: 完全歩合で、固定給・最低保証はありません
+  unit_price:
+    min: 6000
+    max: 12000
+    source: グループ標準
+    confirmed_date: 2026-11-09
+    date_word: 確認
+  own_estimate:
+    min: 約4,900円
+    max: 5,900円
+    basis: 自店の平均単価 約12,600円から計算した試算
+    source: 自店
+    confirmed_date: 2026-11-09
+    date_basis: 事実シート作成日
+  scenarios:   # 金額は万円。ビルド時に 件数×単価 と一致するか検算する
+    - label: 週末だけ
+      per_day: 2
+      days: 8
+      jobs: 16
+      min_man: 9.6
+      max_man: 19.2
+    - label: 平日の日中だけ
+      per_day: 2
+      days: 12
+      jobs: 24
+      min_man: 14.4
+      max_man: 28.8
+    - label: しっかり稼働・繁忙期
+      per_day: 3
+      days: 20
+      jobs: 60
+      min_man: 36
+      max_man: 72
+  payment:
+    value: 翌月15日〜20日払い（銀行振込）
+    source: 本人確定
+    confirmed_date: 2026-11-09
+
+area:
+  summary: 松山市を中心に、車で約60分圏内
+  cities: 松山市・東温市・伊予市・松前町・砥部町・今治市・西条市など
+  source: 自店の実際の対応範囲
+  confirmed_date: 2026-11-09
+  date_basis: 事実シート作成日
+  assignment: 担当範囲は面談で相談して決めます
+  crew: 代表1名（最初の1人を募集中）
+  crew_confirmed_date: 2026-11-09
+  crew_date_basis: 事実シート作成日
+
+day:
+  points:
+    - 出社はなく、自宅から現場へ直接向かいます（直行直帰）
+    - 稼働する日と件数は自分で決めます
+
+contract:
+  form: 業務委託契約（個人事業主として案件ごとに受託）。雇用契約ではありません
+  days: 稼働日は自分で決めます。案件ごとに受けるかどうかを選べます
+  term: 契約期間と終了の条件は、面談でご説明します
+  costs:
+    - item: 清掃道具一式（高圧洗浄機・養生・脚立など）
+      value: 100,000円〜120,000円
+      source: グループ標準の目安
+      confirmed_date: 2026-11-09
+      date_word: 確認
+    - item: 研修費
+      value: 別途必要です（金額はお問い合わせください）
+    - item: 車両（道具一式が積める車）
+      value: 手持ちの車で可
+    - item: 開業届・保険など（任意）
+      value: 0円〜
+      confirmed_date: 2026-11-09
+      date_basis: 事実シート作成日
+  tools_note: 道具は自分で選んで揃えます。店や指定業者から買う必要はなく、店は道具・車両の販売・リース・業者の紹介をしません。
+  not_for:
+    - 毎月決まった固定の金額が必要な方
+    - お客様と直接お話しするのが苦手な方
+    - 約束の時間を守るのが苦手な方
+    - 繁忙期（5〜8月・11〜12月）に稼働日を取りにくい方
+
+flow:
+  - 応募（フォーム）
+  - Zoom面談
+  - 業務委託契約
+  - オンライン研修
+  - 同行研修
+  - 独り立ち
+
+training:
+  online: オンライン研修（動画）
+  ride_along: 各エリアのグループの先輩スタッフに同行する研修（5日間・約12〜16件）
+  source: 本人確定
+  confirmed_date: 2026-11-09
+  fee: 別途必要です（金額はお問い合わせください）
+
+future:
+  - 経験を積んだ先には、自分の店を持つ道もあります（グループの独立支援の仕組み。利用は任意です）
+  - 独立にかかる費用は、希望する方に面談で書面でご案内します
+
+faq:
+  - q: 未経験でも大丈夫ですか？
+    a: 大丈夫です。動画のオンライン研修と、グループの先輩スタッフに同行する研修（5日間・約12〜16件）を受けてから独り立ちします。
+  - q: 副業でも始められますか？
+    a: 始められます。稼働する日と件数は自分で決められ、案件ごとに受けるかどうかも選べます。
+  - q: 報酬はいつ支払われますか？
+    a: 翌月15日〜20日に、銀行振込でお支払いします。
+  - q: 道具を指定の店で買う必要はありますか？
+    a: ありません。自分で選んで揃えていただきます。店は道具・車両の販売・リース・業者の紹介をしません。
+  - q: 活動範囲はどのくらいですか？
+    a: 松山市を中心に、車で約60分圏内です。担当範囲は面談で相談して決めます。
+
+representative:
+  career: 元カーディーラー・保険営業。子育て中
+  greeting:
+    - ハレノヒクリーン代表の桐島達也です。カーディーラーと保険営業の仕事を経て、2026年1月11日に開業しました。いまは子育てをしながら、この仕事をしています。
+    - ハレノヒクリーンは、開業して1年未満の店です。在籍している職人は、代表の私1名だけです。今回はスタッフ第1号となる、最初の1人を募集します。
+  values_lead: 私が仕事で大切にしていることは、次の3つです。
+  values:
+    - 周りに気を配れる
+    - お客様に丁寧に話せる
+    - 約束の時間を守る

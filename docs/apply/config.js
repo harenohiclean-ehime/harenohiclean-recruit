@@ -1,0 +1,1 @@
+const APPLY_ENDPOINT = "";

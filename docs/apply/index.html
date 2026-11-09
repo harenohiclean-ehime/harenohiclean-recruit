@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>面談の申し込み｜ハレノヒクリーン</title>
+<meta name="description" content="ハレノヒクリーンの業務委託の募集について、面談を申し込むページです。">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header"><a href="../">ハレノヒクリーン</a></header>
+<main>
+<section class="block">
+<h1 class="page-title">面談の申し込み</h1>
+<p>応募しても、すぐに契約にはなりません。まず面談で、報酬・費用・契約の中身を確認していただきます。</p>
+<p class="tel-box">お電話でも受け付けます<a class="btn btn-tel btn-wide" href="tel:070-9093-4837">070-9093-4837</a><small>受付 9:00〜18:00</small></p>
+<noscript><p class="form-status is-error">お手数ですが、お電話でご連絡ください（070-9093-4837）</p></noscript>
+<form id="apply-form" novalidate data-phone-message="お手数ですが、お電話でご連絡ください（070-9093-4837）" data-phone="070-9093-4837">
+<div class="field">
+<label for="name">お名前<span class="req">必須</span></label>
+<input id="name" name="name" type="text" autocomplete="name" required>
+</div>
+<div class="field">
+<label for="contact">電話番号またはメールアドレス<span class="req">必須</span></label>
+<input id="contact" name="contact" type="text" autocomplete="on" required>
+</div>
+<fieldset class="field">
+<legend>希望する連絡方法<span class="req">必須</span></legend>
+<label class="choice"><input type="radio" name="contact_method" value="電話" required>電話</label>
+<label class="choice"><input type="radio" name="contact_method" value="メール">メール</label>
+</fieldset>
+<div class="field">
+<label for="first_choice">面談の第1希望日時<span class="opt">任意</span></label>
+<input id="first_choice" name="first_choice" type="datetime-local">
+</div>
+<fieldset class="field">
+<legend>面談方法<span class="opt">任意</span></legend>
+<label class="choice"><input type="radio" name="meeting_method" value="Zoom">Zoom</label>
+<label class="choice"><input type="radio" name="meeting_method" value="電話">電話</label>
+<label class="choice"><input type="radio" name="meeting_method" value="対面">対面</label>
+</fieldset>
+<div class="field">
+<label for="note">質問・備考<span class="opt">任意</span></label>
+<textarea id="note" name="note" rows="4"></textarea>
+</div>
+<div class="field">
+<label class="choice"><input type="checkbox" name="adult" value="はい" required>18歳以上です<span class="req">必須</span></label>
+<label class="choice"><input type="checkbox" name="privacy" value="同意する" required><span><a href="../privacy/">個人情報の取り扱い</a>に同意します</span><span class="req">必須</span></label>
+</div>
+<p id="form-status" class="form-status" role="alert" hidden></p>
+<button class="btn btn-primary btn-wide" type="submit" disabled>面談を申し込む</button>
+</form>
+</section>
+</main>
+<script src="config.js"></script>
+<script src="form.js"></script>
+<footer class="site-footer">
+<p><a href="../privacy/">個人情報の取り扱い</a></p>
+<p>&copy; ハレノヒクリーン</p>
+</footer>
+<nav class="cta-bar" aria-label="お問い合わせ">
+<a class="btn btn-tel" href="tel:070-9093-4837">電話する</a>
+
+</nav>
+</body>
+</html>
